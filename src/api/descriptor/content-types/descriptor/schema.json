@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "descriptors",
+  "info": {
+    "singularName": "descriptor",
+    "pluralName": "descriptors",
+    "displayName": "Descriptor",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid"
+    },
+    "profiles": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::profile.profile",
+      "mappedBy": "descriptors"
+    }
+  }
+}

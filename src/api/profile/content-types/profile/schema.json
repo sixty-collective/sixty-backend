@@ -1,0 +1,102 @@
+{
+  "kind": "collectionType",
+  "collectionName": "profiles",
+  "info": {
+    "singularName": "profile",
+    "pluralName": "profiles",
+    "displayName": "Profile",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "import-export-entries": {
+      "idField": "name"
+    }
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "pronouns": {
+      "type": "string"
+    },
+    "website": {
+      "type": "string"
+    },
+    "instagramHandle": {
+      "type": "string"
+    },
+    "availableForWork": {
+      "type": "boolean"
+    },
+    "bio": {
+      "type": "text"
+    },
+    "workStyleBio": {
+      "type": "text"
+    },
+    "gigsSeeking": {
+      "type": "text"
+    },
+    "pastWork": {
+      "type": "text"
+    },
+    "workSamples": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.work-sample"
+    },
+    "slug": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "testComponents": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.test-component"
+    },
+    "profilePicture": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "twitterHandle": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "testmedia": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "disciplines": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::discipline.discipline",
+      "inversedBy": "profiles"
+    },
+    "descriptors": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::descriptor.descriptor",
+      "inversedBy": "profiles"
+    }
+  }
+}
