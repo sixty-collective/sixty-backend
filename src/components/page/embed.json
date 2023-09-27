@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_page_embeds",
+  "info": {
+    "displayName": "Embed",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "embed": {
+      "type": "enumeration",
+      "enum": [
+        "donorbox"
+      ]
+    }
+  }
+}
