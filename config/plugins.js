@@ -3,6 +3,11 @@ module.exports = ({ env }) => ({
     enabled: true,
     config: {},
   },
+  "users-permissions": {
+    config: {
+      jwtSecret: env("JWT_SECRET") || crypto.randomBytes(16).toString("base64"),
+    },
+  },
   transformer: {
     enabled: true,
     config: {
