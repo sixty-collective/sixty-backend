@@ -10,10 +10,10 @@
     "lodash.set": "^4.3.2",
     "mime-types": "^2.1.27",
     "strapi": "^3.6.11",
-    "strapi-plugin-fuzzy-search": "^2.0.2",
     "strapi-plugin-import-export-entries": "^1.21.0",
     "strapi-plugin-meilisearch": "^0.9.2",
-    "strapi-plugin-transformer": "^3.1.1"
+    "strapi-plugin-transformer": "^3.1.1",
+    "typescript": "^5.2.2"
   },
   "name": "backend",
   "private": true,
@@ -38,6 +38,6 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "yup": "^1.2.0"
+    "yup": "^0.32.11"
   }
 }
