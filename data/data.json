@@ -52,13 +52,11 @@
   "authors": [
     {
       "name": "David Doe",
-      "email": "daviddoe@strapi.io",
-      "avatar": "daviddoe@strapi.io.jpg"
+      "email": "daviddoe@strapi.io"
     },
     {
       "name": "Sarah Baker",
-      "email": "sarahbaker@strapi.io",
-      "avatar": "sarahbaker@strapi.io.jpg"
+      "email": "sarahbaker@strapi.io"
     }
   ],
   "articles": [
@@ -93,10 +91,7 @@
         },
         {
           "__component": "shared.slider",
-          "files": [
-            "coffee-art.jpg",
-            "coffee-beans.jpg"
-          ]
+          "files": ["coffee-art.jpg", "coffee-beans.jpg"]
         }
       ]
     },
@@ -131,10 +126,7 @@
         },
         {
           "__component": "shared.slider",
-          "files": [
-            "coffee-art.jpg",
-            "coffee-beans.jpg"
-          ]
+          "files": ["coffee-art.jpg", "coffee-beans.jpg"]
         }
       ]
     },
@@ -169,10 +161,7 @@
         },
         {
           "__component": "shared.slider",
-          "files": [
-            "coffee-art.jpg",
-            "coffee-beans.jpg"
-          ]
+          "files": ["coffee-art.jpg", "coffee-beans.jpg"]
         }
       ]
     },
@@ -207,10 +196,7 @@
         },
         {
           "__component": "shared.slider",
-          "files": [
-            "coffee-art.jpg",
-            "coffee-beans.jpg"
-          ]
+          "files": ["coffee-art.jpg", "coffee-beans.jpg"]
         }
       ]
     },
@@ -245,10 +231,7 @@
         },
         {
           "__component": "shared.slider",
-          "files": [
-            "coffee-art.jpg",
-            "coffee-beans.jpg"
-          ]
+          "files": ["coffee-art.jpg", "coffee-beans.jpg"]
         }
       ]
     }
