@@ -9,7 +9,7 @@ module.exports = ({ env }) => ({
     },
   },
   transformer: {
-    enabled: true,
+    enabled: false,
     config: {
       responseTransforms: {
         removeAttributesKey: true,

@@ -35,9 +35,9 @@
     "blocks": {
       "type": "dynamiczone",
       "components": [
-        "page.text",
+        "page.embed",
         "page.image",
-        "page.embed"
+        "page.text"
       ]
     },
     "sideBlocks": {
