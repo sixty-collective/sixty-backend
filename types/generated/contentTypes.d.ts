@@ -852,7 +852,7 @@ export interface ApiDescriptorDescriptor extends Schema.CollectionType {
   };
   attributes: {
     name: Attribute.String;
-    slug: Attribute.UID;
+    slug: Attribute.UID<'api::descriptor.descriptor', 'name'>;
     profiles: Attribute.Relation<
       'api::descriptor.descriptor',
       'manyToMany',
@@ -900,7 +900,7 @@ export interface ApiDisciplineDiscipline extends Schema.CollectionType {
       'manyToMany',
       'api::profile.profile'
     >;
-    slug: Attribute.UID;
+    slug: Attribute.UID<'api::discipline.discipline', 'name'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -935,6 +935,8 @@ export interface ApiGlobalGlobal extends Schema.SingleType {
     favicon: Attribute.Media;
     siteDescription: Attribute.Text & Attribute.Required;
     defaultSeo: Attribute.Component<'shared.seo'>;
+    homeHeaderText: Attribute.RichText;
+    sidebarText: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
@@ -968,9 +970,11 @@ export interface ApiPagePage extends Schema.CollectionType {
     slug: Attribute.UID;
     coverImage: Attribute.Media;
     column: Attribute.Boolean;
-    blocks: Attribute.DynamicZone<['page.embed', 'page.image', 'page.text']>;
+    blocks: Attribute.DynamicZone<
+      ['page.embed', 'page.image', 'page.text', 'page.faq']
+    >;
     sideBlocks: Attribute.DynamicZone<
-      ['page.embed', 'page.image', 'page.text']
+      ['page.embed', 'page.image', 'page.text', 'page.faq']
     >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
@@ -1081,6 +1085,37 @@ export interface ApiResourceResource extends Schema.CollectionType {
   };
 }
 
+export interface ApiTestimonialTestimonial extends Schema.CollectionType {
+  collectionName: 'testimonials';
+  info: {
+    singularName: 'testimonial';
+    pluralName: 'testimonials';
+    displayName: 'Testimonial';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String;
+    body: Attribute.Text;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::testimonial.testimonial',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::testimonial.testimonial',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -1107,6 +1142,7 @@ declare module '@strapi/types' {
       'api::page.page': ApiPagePage;
       'api::profile.profile': ApiProfileProfile;
       'api::resource.resource': ApiResourceResource;
+      'api::testimonial.testimonial': ApiTestimonialTestimonial;
     }
   }
 }

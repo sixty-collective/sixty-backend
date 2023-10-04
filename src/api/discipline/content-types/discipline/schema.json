@@ -29,7 +29,8 @@
       "mappedBy": "disciplines"
     },
     "slug": {
-      "type": "uid"
+      "type": "uid",
+      "targetField": "name"
     }
   }
 }

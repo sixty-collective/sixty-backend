@@ -34,6 +34,12 @@
       "type": "component",
       "repeatable": false,
       "component": "shared.seo"
+    },
+    "homeHeaderText": {
+      "type": "richtext"
+    },
+    "sidebarText": {
+      "type": "text"
     }
   }
 }

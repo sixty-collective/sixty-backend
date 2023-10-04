@@ -37,7 +37,8 @@
       "components": [
         "page.embed",
         "page.image",
-        "page.text"
+        "page.text",
+        "page.faq"
       ]
     },
     "sideBlocks": {
@@ -45,7 +46,8 @@
       "components": [
         "page.embed",
         "page.image",
-        "page.text"
+        "page.text",
+        "page.faq"
       ]
     }
   }

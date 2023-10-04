@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_page_faqs",
+  "info": {
+    "displayName": "faq"
+  },
+  "options": {},
+  "attributes": {
+    "qa": {
+      "displayName": "qa",
+      "type": "component",
+      "repeatable": true,
+      "component": "page.qa"
+    }
+  }
+}

@@ -7,7 +7,19 @@ export interface PageEmbed extends Schema.Component {
     description: '';
   };
   attributes: {
-    embed: Attribute.Enumeration<['donorbox']>;
+    embed: Attribute.Enumeration<
+      ['donorbox', 'testimonialList', 'testimonialSubmission', 'contact']
+    >;
+  };
+}
+
+export interface PageFaq extends Schema.Component {
+  collectionName: 'components_page_faqs';
+  info: {
+    displayName: 'faq';
+  };
+  attributes: {
+    qa: Attribute.Component<'page.qa', true>;
   };
 }
 
@@ -18,6 +30,17 @@ export interface PageImage extends Schema.Component {
   };
   attributes: {
     image: Attribute.Media;
+  };
+}
+
+export interface PageQa extends Schema.Component {
+  collectionName: 'components_page_qas';
+  info: {
+    displayName: 'qa';
+  };
+  attributes: {
+    question: Attribute.String;
+    answer: Attribute.Text;
   };
 }
 
@@ -136,7 +159,9 @@ declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'page.embed': PageEmbed;
+      'page.faq': PageFaq;
       'page.image': PageImage;
+      'page.qa': PageQa;
       'page.text': PageText;
       'shared.images': SharedImages;
       'shared.media': SharedMedia;

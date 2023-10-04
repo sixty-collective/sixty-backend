@@ -9,7 +9,10 @@
     "embed": {
       "type": "enumeration",
       "enum": [
-        "donorbox"
+        "donorbox",
+        "testimonialList",
+        "testimonialSubmission",
+        "contact"
       ]
     }
   }
