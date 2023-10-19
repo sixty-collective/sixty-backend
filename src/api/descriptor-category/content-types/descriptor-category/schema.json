@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "descriptor_categories",
+  "info": {
+    "singularName": "descriptor-category",
+    "pluralName": "descriptor-categories",
+    "displayName": "Descriptor Category"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    }
+  }
+}

@@ -858,6 +858,11 @@ export interface ApiDescriptorDescriptor extends Schema.CollectionType {
       'manyToMany',
       'api::profile.profile'
     >;
+    descriptor_category: Attribute.Relation<
+      'api::descriptor.descriptor',
+      'oneToOne',
+      'api::descriptor-category.descriptor-category'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -869,6 +874,38 @@ export interface ApiDescriptorDescriptor extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::descriptor.descriptor',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiDescriptorCategoryDescriptorCategory
+  extends Schema.CollectionType {
+  collectionName: 'descriptor_categories';
+  info: {
+    singularName: 'descriptor-category';
+    pluralName: 'descriptor-categories';
+    displayName: 'Descriptor Category';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String;
+    slug: Attribute.UID<'api::descriptor-category.descriptor-category', 'name'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::descriptor-category.descriptor-category',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::descriptor-category.descriptor-category',
       'oneToOne',
       'admin::user'
     > &
@@ -901,6 +938,11 @@ export interface ApiDisciplineDiscipline extends Schema.CollectionType {
       'api::profile.profile'
     >;
     slug: Attribute.UID<'api::discipline.discipline', 'name'>;
+    discipline_category: Attribute.Relation<
+      'api::discipline.discipline',
+      'oneToOne',
+      'api::discipline-category.discipline-category'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -912,6 +954,38 @@ export interface ApiDisciplineDiscipline extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::discipline.discipline',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiDisciplineCategoryDisciplineCategory
+  extends Schema.CollectionType {
+  collectionName: 'discipline_categories';
+  info: {
+    singularName: 'discipline-category';
+    pluralName: 'discipline-categories';
+    displayName: 'Discipline Category';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String;
+    slug: Attribute.UID<'api::discipline-category.discipline-category', 'name'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::discipline-category.discipline-category',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::discipline-category.discipline-category',
       'oneToOne',
       'admin::user'
     > &
@@ -1137,7 +1211,9 @@ declare module '@strapi/types' {
       'api::author.author': ApiAuthorAuthor;
       'api::category.category': ApiCategoryCategory;
       'api::descriptor.descriptor': ApiDescriptorDescriptor;
+      'api::descriptor-category.descriptor-category': ApiDescriptorCategoryDescriptorCategory;
       'api::discipline.discipline': ApiDisciplineDiscipline;
+      'api::discipline-category.discipline-category': ApiDisciplineCategoryDisciplineCategory;
       'api::global.global': ApiGlobalGlobal;
       'api::page.page': ApiPagePage;
       'api::profile.profile': ApiProfileProfile;

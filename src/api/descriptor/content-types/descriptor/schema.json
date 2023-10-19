@@ -24,6 +24,11 @@
       "relation": "manyToMany",
       "target": "api::profile.profile",
       "mappedBy": "descriptors"
+    },
+    "descriptor_category": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::descriptor-category.descriptor-category"
     }
   }
 }

@@ -31,6 +31,11 @@
     "slug": {
       "type": "uid",
       "targetField": "name"
+    },
+    "discipline_category": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::discipline-category.discipline-category"
     }
   }
 }

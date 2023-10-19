@@ -1,0 +1,607 @@
+[
+  {
+    "id": 1,
+    "name": "Actor (Film)",
+    "nameForWorkSamples": "Acting (Film)",
+    "discipline_category": 4,
+    "slug": "actor-film"
+  },
+  {
+    "name": "Actor (Theater)",
+    "nameForWorkSamples": "Acting (Theater)",
+    "discipline_category": 4,
+    "slug": "actor-theater"
+  },
+  {
+    "name": "Animator",
+    "nameForWorkSamples": "Animation",
+    "discipline_category": 5,
+    "slug": "animator"
+  },
+  {
+    "name": "Architect / Urban Designer",
+    "nameForWorkSamples": "Architecture",
+    "discipline_category": 1,
+    "slug": "architect-urban-designer"
+  },
+  {
+    "name": "Archivist (Community or Self Trained)",
+    "nameForWorkSamples": "Archiving",
+    "discipline_category": 2,
+    "slug": "archivist-community-or-self-trained"
+  },
+  {
+    "name": "Archivist (Institutionally Trained)",
+    "nameForWorkSamples": "Archiving",
+    "discipline_category": 2,
+    "slug": "archivist-institutionally-trained"
+  },
+  {
+    "name": "Art Administrator",
+    "nameForWorkSamples": "Arts Admin",
+    "discipline_category": 3,
+    "slug": "art-administrator"
+  },
+  {
+    "name": "Art Historian / Scholar",
+    "nameForWorkSamples": "Research",
+    "discipline_category": 2,
+    "slug": "art-historian-scholar"
+  },
+  {
+    "name": "Art Organizer (curatorial)",
+    "nameForWorkSamples": "Curating",
+    "discipline_category": 3,
+    "slug": "art-organizer-curatorial"
+  },
+  {
+    "name": "Art Therapist / Healing Artist",
+    "nameForWorkSamples": "Art Therapy / Healing",
+    "discipline_category": 3,
+    "slug": "art-therapist-healing-artist"
+  },
+  {
+    "name": "Artist Organizer / Activist",
+    "nameForWorkSamples": "Arts Organizing / Activism",
+    "discipline_category": 3,
+    "slug": "artist-organizer-activist"
+  },
+  {
+    "name": "Bookmaker / Book Binder",
+    "nameForWorkSamples": "Bookmaking",
+    "discipline_category": 5,
+    "slug": "bookmaker-book-binder"
+  },
+  {
+    "name": "Cataloger",
+    "nameForWorkSamples": "Cataloging",
+    "discipline_category": 2,
+    "slug": "cataloger"
+  },
+  {
+    "name": "Ceramicist",
+    "nameForWorkSamples": "Ceramics",
+    "discipline_category": 1,
+    "slug": "ceramicist"
+  },
+  {
+    "name": "Chef / Baker / Food Artist",
+    "nameForWorkSamples": "Culinary Arts",
+    "discipline_category": 1,
+    "slug": "chef-baker-food-artist"
+  },
+  {
+    "name": "Choreographer",
+    "nameForWorkSamples": "Choreography",
+    "discipline_category": 4,
+    "slug": "choreographer"
+  },
+  {
+    "name": "Cinematographer / DP",
+    "nameForWorkSamples": "Cinematography",
+    "discipline_category": 5,
+    "slug": "cinematographer-dp"
+  },
+  {
+    "name": "Collage Artist",
+    "nameForWorkSamples": "Collage",
+    "discipline_category": 5,
+    "slug": "collage-artist"
+  },
+  {
+    "name": "Comic Artist",
+    "nameForWorkSamples": "Comic Arts",
+    "discipline_category": 5,
+    "slug": "comic-artist"
+  },
+  {
+    "name": "Community Organizer / Activist",
+    "nameForWorkSamples": "Community Organizing / Activism",
+    "discipline_category": 3,
+    "slug": "community-organizer-activist"
+  },
+  {
+    "name": "Conservator (AV materials)",
+    "nameForWorkSamples": "Conservation (AV)",
+    "discipline_category": 2,
+    "slug": "conservator-av-materials"
+  },
+  {
+    "name": "Convervator (objects)",
+    "nameForWorkSamples": "Conservation (Objects)",
+    "discipline_category": 2,
+    "slug": "convervator-objects"
+  },
+  {
+    "name": "Copywriter",
+    "nameForWorkSamples": "Copywriting",
+    "discipline_category": 6,
+    "slug": "copywriter"
+  },
+  {
+    "name": "Costume Designer",
+    "nameForWorkSamples": "Costume Design",
+    "discipline_category": 1,
+    "slug": "costume-designer"
+  },
+  {
+    "name": "Curator (Archival/Library)",
+    "nameForWorkSamples": "Curating",
+    "discipline_category": 3,
+    "slug": "curator-archival/library"
+  },
+  {
+    "name": "Curator (Events)",
+    "nameForWorkSamples": "Curating",
+    "discipline_category": 3,
+    "slug": "curator-events"
+  },
+  {
+    "name": "Curator (Exhibitions)",
+    "nameForWorkSamples": "Curating",
+    "discipline_category": 3,
+    "slug": "curator-exhibitions"
+  },
+  {
+    "name": "Curator (Performance)",
+    "nameForWorkSamples": "Curating",
+    "discipline_category": 3,
+    "slug": "curator-performance"
+  },
+  {
+    "name": "Curator (Visual Art)",
+    "nameForWorkSamples": "Curating",
+    "discipline_category": 3,
+    "slug": "curator-visual-art"
+  },
+  {
+    "name": "Dancer",
+    "nameForWorkSamples": "Dancing",
+    "discipline_category": 4,
+    "slug": "dancer"
+  },
+  {
+    "name": "Digital Archivist",
+    "nameForWorkSamples": "Digital Archiving",
+    "discipline_category": 2,
+    "slug": "digital-archivist"
+  },
+  {
+    "name": "Digital Artist",
+    "nameForWorkSamples": "Digital Art",
+    "discipline_category": 5,
+    "slug": "digital-artist"
+  },
+  {
+    "name": "Director (Film)",
+    "nameForWorkSamples": "Directing (Film)",
+    "discipline_category": 4,
+    "slug": "director-film"
+  },
+  {
+    "name": "Director (Theater)",
+    "nameForWorkSamples": "Directing (Theater)",
+    "discipline_category": 4,
+    "slug": "director-theater"
+  },
+  {
+    "name": "DJ",
+    "nameForWorkSamples": "DJing",
+    "discipline_category": 4,
+    "slug": "dj"
+  },
+  {
+    "name": "Drag Artist",
+    "nameForWorkSamples": "Drag",
+    "discipline_category": 4,
+    "slug": "drag-artist"
+  },
+  {
+    "name": "Dramaturg",
+    "nameForWorkSamples": "Dramaturgy",
+    "discipline_category": 4,
+    "slug": "dramaturg"
+  },
+  {
+    "name": "Editor / Copy Editor",
+    "nameForWorkSamples": "Editing",
+    "discipline_category": 6,
+    "slug": "editor-copy-editor"
+  },
+  {
+    "name": "Editor (Film)",
+    "nameForWorkSamples": "Editing (Film)",
+    "discipline_category": 5,
+    "slug": "editor-film"
+  },
+  {
+    "name": "Essayist",
+    "nameForWorkSamples": "Writing",
+    "discipline_category": 6,
+    "slug": "essayist"
+  },
+  {
+    "name": "Etching",
+    "nameForWorkSamples": "Etching",
+    "discipline_category": 5,
+    "slug": "etching"
+  },
+  {
+    "name": "Fabricator",
+    "nameForWorkSamples": "Fabrication",
+    "discipline_category": 1,
+    "slug": "fabricator"
+  },
+  {
+    "name": "Fashion Designer",
+    "nameForWorkSamples": "Fashion Design",
+    "discipline_category": 1,
+    "slug": "fashion-designer"
+  },
+  {
+    "name": "Framer",
+    "nameForWorkSamples": "Framing",
+    "discipline_category": 1,
+    "slug": "framer"
+  },
+  {
+    "name": "Furniture + Home Goods Designer",
+    "nameForWorkSamples": "Design (Furniture)",
+    "discipline_category": 1,
+    "slug": "furniture-home-goods-designer"
+  },
+  {
+    "name": "Gallerist / Art Dealer",
+    "nameForWorkSamples": "Art Dealing",
+    "discipline_category": 3,
+    "slug": "gallerist-art-dealer"
+  },
+  {
+    "name": "Graffiti Artist",
+    "nameForWorkSamples": "Graffiti",
+    "discipline_category": 5,
+    "slug": "graffiti-artist"
+  },
+  {
+    "name": "Graphic Designer",
+    "nameForWorkSamples": "Graphic Design",
+    "discipline_category": 5,
+    "slug": "graphic-designer"
+  },
+  {
+    "name": "Historian / Scholar",
+    "nameForWorkSamples": "Research",
+    "discipline_category": 2,
+    "slug": "historian-scholar"
+  },
+  {
+    "name": "Illustrator",
+    "nameForWorkSamples": "Illustration",
+    "discipline_category": 5,
+    "slug": "illustrator"
+  },
+  {
+    "name": "Interviewer",
+    "nameForWorkSamples": "Interviewing",
+    "discipline_category": 6,
+    "slug": "interviewer"
+  },
+  {
+    "name": "Jewelry Maker",
+    "nameForWorkSamples": "Jewelry Making",
+    "discipline_category": 1,
+    "slug": "jewelry-maker"
+  },
+  {
+    "name": "Journalist",
+    "nameForWorkSamples": "Journalism",
+    "discipline_category": 6,
+    "slug": "journalist"
+  },
+  {
+    "name": "Librarian",
+    "nameForWorkSamples": "Librarianship",
+    "discipline_category": 2,
+    "slug": "librarian"
+  },
+  {
+    "name": "Lighting Designer",
+    "nameForWorkSamples": "Lighting Design",
+    "discipline_category": 1,
+    "slug": "lighting-designer"
+  },
+  {
+    "name": "Lithographer",
+    "nameForWorkSamples": "Lithography",
+    "discipline_category": 5,
+    "slug": "lithographer"
+  },
+  {
+    "name": "Makeup Artist",
+    "nameForWorkSamples": "Makeup Arts",
+    "discipline_category": 1,
+    "slug": "makeup-artist"
+  },
+  {
+    "name": "Model / Muse",
+    "nameForWorkSamples": "Modeling",
+    "discipline_category": 1,
+    "slug": "model-muse"
+  },
+  {
+    "name": "Musician / Instrumentalist",
+    "nameForWorkSamples": "Music",
+    "discipline_category": 4,
+    "slug": "musician-instrumentalist"
+  },
+  {
+    "name": "Oral Historian",
+    "nameForWorkSamples": "Oral History",
+    "discipline_category": 2,
+    "slug": "oral-historian"
+  },
+  {
+    "name": "Painter / Drawer",
+    "nameForWorkSamples": "Painting + Drawing",
+    "discipline_category": 5,
+    "slug": "painter-drawer"
+  },
+  {
+    "name": "Performance Artist",
+    "nameForWorkSamples": "Performance Art",
+    "discipline_category": 4,
+    "slug": "performance-artist"
+  },
+  {
+    "name": "Photographer (Artwork)",
+    "nameForWorkSamples": "Photography",
+    "discipline_category": 5,
+    "slug": "photographer-artwork"
+  },
+  {
+    "name": "Photographer (Events)",
+    "nameForWorkSamples": "Photography",
+    "discipline_category": 5,
+    "slug": "photographer-events"
+  },
+  {
+    "name": "Photographer (Portraits)",
+    "nameForWorkSamples": "Photography",
+    "discipline_category": 5,
+    "slug": "photographer-portraits"
+  },
+  {
+    "name": "Poet (Performance)",
+    "nameForWorkSamples": "Poetry",
+    "discipline_category": 6,
+    "slug": "poet-performance"
+  },
+  {
+    "name": "Poet (Written)",
+    "nameForWorkSamples": "Poetry",
+    "discipline_category": 6,
+    "slug": "poet-written"
+  },
+  {
+    "name": "Preparator / Installer / Art Handler",
+    "nameForWorkSamples": "Installation + Art Handling",
+    "discipline_category": 1,
+    "slug": "preparator-installer-art-handler"
+  },
+  {
+    "name": "Preservationist",
+    "nameForWorkSamples": "Preservation",
+    "discipline_category": 2,
+    "slug": "preservationist"
+  },
+  {
+    "name": "Printmaker",
+    "nameForWorkSamples": "Printmaking",
+    "discipline_category": 5,
+    "slug": "printmaker"
+  },
+  {
+    "name": "Public Art (2-D)",
+    "nameForWorkSamples": "Public Art",
+    "discipline_category": 5,
+    "slug": "public-art-2-d"
+  },
+  {
+    "name": "Public Art (3-D)",
+    "nameForWorkSamples": "Public Art",
+    "discipline_category": 1,
+    "slug": "public-art-3-d"
+  },
+  {
+    "name": "Publisher",
+    "nameForWorkSamples": "Publishing",
+    "discipline_category": 6,
+    "slug": "publisher"
+  },
+  {
+    "name": "Researcher",
+    "nameForWorkSamples": "Research",
+    "discipline_category": 2,
+    "slug": "researcher"
+  },
+  {
+    "name": "Risography",
+    "nameForWorkSamples": "Printmaking",
+    "discipline_category": 5,
+    "slug": "risography"
+  },
+  {
+    "name": "Screenprinter",
+    "nameForWorkSamples": "Screenprinting",
+    "discipline_category": 5,
+    "slug": "screenprinter"
+  },
+  {
+    "name": "Screenwriter",
+    "nameForWorkSamples": "Screenwriting",
+    "discipline_category": 6,
+    "slug": "screenwriter",
+    "": "",
+    "__1": "screenwriter"
+  },
+  {
+    "name": "Sculptor (non-ceramic)",
+    "nameForWorkSamples": "Sculpture",
+    "discipline_category": 1,
+    "slug": "sculptor-non-ceramic"
+  },
+  {
+    "name": "Seamstress / Patternmaker",
+    "nameForWorkSamples": "Sewing + Patternmaking",
+    "discipline_category": 1,
+    "slug": "seamstress-patternmaker"
+  },
+  {
+    "name": "Sound Editor / Audio Engineer",
+    "nameForWorkSamples": "Sound Editing + Engineering",
+    "discipline_category": 4,
+    "slug": "sound-editor-audio-engineer"
+  },
+  {
+    "name": "Storyteller",
+    "nameForWorkSamples": "Storytelling",
+    "discipline_category": 4,
+    "slug": "storyteller"
+  },
+  {
+    "name": "Stylist",
+    "nameForWorkSamples": "Styling",
+    "discipline_category": 1,
+    "slug": "stylist"
+  },
+  {
+    "name": "Tarot Reader",
+    "nameForWorkSamples": "Tarot",
+    "discipline_category": 4,
+    "slug": "tarot-reader"
+  },
+  {
+    "name": "Teaching Artist / Arts Educator",
+    "nameForWorkSamples": "Arts Education",
+    "discipline_category": 3,
+    "slug": "teaching-artist-arts-educator"
+  },
+  {
+    "name": "Textiles + Fiber Artist",
+    "nameForWorkSamples": "Textile + Fiber Arts",
+    "discipline_category": 1,
+    "slug": "textiles-fiber-artist"
+  },
+  {
+    "name": "Transcriber",
+    "nameForWorkSamples": "Transcription",
+    "discipline_category": 6,
+    "slug": "transcriber"
+  },
+  {
+    "name": "Translator (other languages)",
+    "nameForWorkSamples": "Translation",
+    "discipline_category": 6,
+    "slug": "translator-other-languages"
+  },
+  {
+    "name": "Translator (Portuguese)",
+    "nameForWorkSamples": "Translation",
+    "discipline_category": 6,
+    "slug": "translator-portuguese"
+  },
+  {
+    "name": "Translator (Spanish)",
+    "nameForWorkSamples": "Translation",
+    "discipline_category": 6,
+    "slug": "translator-spanish"
+  },
+  {
+    "name": "Typographer / Hand Lettering / Sign Painter",
+    "nameForWorkSamples": "Typography + Sign Painting",
+    "discipline_category": 5,
+    "slug": "typographer-hand-lettering-sign-painter",
+    "": "",
+    "__1": "Typeform separates Typography and Letter Press."
+  },
+  {
+    "name": "Letterpress",
+    "nameForWorkSamples": "Letterpress",
+    "discipline_category": 5,
+    "slug": "letterpress"
+  },
+  {
+    "name": "UX/UI Designer",
+    "nameForWorkSamples": "UX/UI Design",
+    "discipline_category": 5,
+    "slug": "ux/ui-designer"
+  },
+  {
+    "name": "Videographer",
+    "nameForWorkSamples": "Videography",
+    "discipline_category": 5,
+    "slug": "videographer"
+  },
+  {
+    "name": "Virtual Reality / Augmented Reality",
+    "nameForWorkSamples": "VR/AR Arts",
+    "discipline_category": 5,
+    "slug": "virtual-reality-augmented-reality"
+  },
+  {
+    "name": "Vocalist",
+    "nameForWorkSamples": "Vocals",
+    "discipline_category": 4,
+    "slug": "vocalist"
+  },
+  {
+    "name": "Web Developer / Coder",
+    "nameForWorkSamples": "Web Development",
+    "discipline_category": 5,
+    "slug": "web-developer-coder"
+  },
+  {
+    "name": "Woodworker",
+    "nameForWorkSamples": "Woodworking",
+    "discipline_category": 1,
+    "slug": "woodworker"
+  },
+  {
+    "name": "Zine Maker / Zinester",
+    "nameForWorkSamples": "Zine Making",
+    "discipline_category": 5,
+    "slug": "zine-maker-zinester"
+  },
+  {
+    "name": "Mixed Media Artist",
+    "nameForWorkSamples": "Mixed Media Arts",
+    "discipline_category": 5,
+    "slug": "mixed-media-artist"
+  },
+  {
+    "name": "Lens-based Artist",
+    "nameForWorkSamples": "Lens-based Arts",
+    "discipline_category": 5,
+    "slug": "lens-based-artist"
+  }
+]
