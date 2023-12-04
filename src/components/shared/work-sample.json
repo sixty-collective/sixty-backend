@@ -30,6 +30,17 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::discipline.discipline"
+    },
+    "embed": {
+      "type": "boolean",
+      "default": false
+    },
+    "embedSource": {
+      "type": "enumeration",
+      "enum": [
+        "Vimeo",
+        "YouTube"
+      ]
     }
   }
 }

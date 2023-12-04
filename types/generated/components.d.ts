@@ -152,6 +152,8 @@ export interface SharedWorkSample extends Schema.Component {
       'oneToMany',
       'api::discipline.discipline'
     >;
+    embed: Attribute.Boolean & Attribute.DefaultTo<false>;
+    embedSource: Attribute.Enumeration<['Vimeo', 'YouTube']>;
   };
 }
 

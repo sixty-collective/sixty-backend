@@ -1011,6 +1011,7 @@ export interface ApiGlobalGlobal extends Schema.SingleType {
     defaultSeo: Attribute.Component<'shared.seo'>;
     homeHeaderText: Attribute.RichText;
     sidebarText: Attribute.Text;
+    headerImage: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
