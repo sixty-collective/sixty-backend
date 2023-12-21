@@ -1089,7 +1089,6 @@ export interface ApiProfileProfile extends Schema.CollectionType {
     gigsSeeking: Attribute.Text;
     pastWork: Attribute.Text;
     workSamples: Attribute.Component<'shared.work-sample', true>;
-    slug: Attribute.String & Attribute.Required & Attribute.Unique;
     testComponents: Attribute.Component<'shared.test-component', true>;
     profilePicture: Attribute.Media;
     twitterHandle: Attribute.String;
@@ -1105,6 +1104,7 @@ export interface ApiProfileProfile extends Schema.CollectionType {
       'manyToMany',
       'api::descriptor.descriptor'
     >;
+    slug: Attribute.UID<'api::profile.profile', 'name'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1129,6 +1129,7 @@ export interface ApiResourceResource extends Schema.CollectionType {
     singularName: 'resource';
     pluralName: 'resources';
     displayName: 'Resource';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1142,6 +1143,11 @@ export interface ApiResourceResource extends Schema.CollectionType {
       'api::category.category'
     >;
     link: Attribute.String;
+    resource_tags: Attribute.Relation<
+      'api::resource.resource',
+      'manyToMany',
+      'api::resource-tag.resource-tag'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1153,6 +1159,42 @@ export interface ApiResourceResource extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::resource.resource',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiResourceTagResourceTag extends Schema.CollectionType {
+  collectionName: 'resource_tags';
+  info: {
+    singularName: 'resource-tag';
+    pluralName: 'resource-tags';
+    displayName: 'Resource Tag';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String;
+    slug: Attribute.UID<'api::resource-tag.resource-tag', 'name'>;
+    resources: Attribute.Relation<
+      'api::resource-tag.resource-tag',
+      'manyToMany',
+      'api::resource.resource'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::resource-tag.resource-tag',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::resource-tag.resource-tag',
       'oneToOne',
       'admin::user'
     > &
@@ -1219,6 +1261,7 @@ declare module '@strapi/types' {
       'api::page.page': ApiPagePage;
       'api::profile.profile': ApiProfileProfile;
       'api::resource.resource': ApiResourceResource;
+      'api::resource-tag.resource-tag': ApiResourceTagResourceTag;
       'api::testimonial.testimonial': ApiTestimonialTestimonial;
     }
   }
