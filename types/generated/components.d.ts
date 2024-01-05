@@ -153,7 +153,7 @@ export interface SharedWorkSample extends Schema.Component {
       'api::discipline.discipline'
     >;
     embed: Attribute.Boolean & Attribute.DefaultTo<false>;
-    embedSource: Attribute.Enumeration<['Vimeo', 'YouTube']>;
+    embedLink: Attribute.String;
   };
 }
 
