@@ -17,6 +17,12 @@
     "slug": {
       "type": "uid",
       "targetField": "name"
+    },
+    "work_sample_disciplines": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::work-sample-discipline.work-sample-discipline",
+      "mappedBy": "discipline_category"
     }
   }
 }

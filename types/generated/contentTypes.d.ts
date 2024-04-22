@@ -931,7 +931,6 @@ export interface ApiDisciplineDiscipline extends Schema.CollectionType {
   };
   attributes: {
     name: Attribute.String;
-    nameForWorkSamples: Attribute.String;
     profiles: Attribute.Relation<
       'api::discipline.discipline',
       'manyToMany',
@@ -975,6 +974,11 @@ export interface ApiDisciplineCategoryDisciplineCategory
   attributes: {
     name: Attribute.String;
     slug: Attribute.UID<'api::discipline-category.discipline-category', 'name'>;
+    work_sample_disciplines: Attribute.Relation<
+      'api::discipline-category.discipline-category',
+      'oneToMany',
+      'api::work-sample-discipline.work-sample-discipline'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1233,6 +1237,46 @@ export interface ApiTestimonialTestimonial extends Schema.CollectionType {
   };
 }
 
+export interface ApiWorkSampleDisciplineWorkSampleDiscipline
+  extends Schema.CollectionType {
+  collectionName: 'work_sample_disciplines';
+  info: {
+    singularName: 'work-sample-discipline';
+    pluralName: 'work-sample-disciplines';
+    displayName: 'Work Sample Discipline';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String;
+    slug: Attribute.UID<
+      'api::work-sample-discipline.work-sample-discipline',
+      'name'
+    >;
+    discipline_category: Attribute.Relation<
+      'api::work-sample-discipline.work-sample-discipline',
+      'manyToOne',
+      'api::discipline-category.discipline-category'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::work-sample-discipline.work-sample-discipline',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::work-sample-discipline.work-sample-discipline',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -1263,6 +1307,7 @@ declare module '@strapi/types' {
       'api::resource.resource': ApiResourceResource;
       'api::resource-tag.resource-tag': ApiResourceTagResourceTag;
       'api::testimonial.testimonial': ApiTestimonialTestimonial;
+      'api::work-sample-discipline.work-sample-discipline': ApiWorkSampleDisciplineWorkSampleDiscipline;
     }
   }
 }

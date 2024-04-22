@@ -147,10 +147,10 @@ export interface SharedWorkSample extends Schema.Component {
     images: Attribute.Media;
     link: Attribute.String;
     description: Attribute.Text;
-    disciplines: Attribute.Relation<
+    work_sample_disciplines: Attribute.Relation<
       'shared.work-sample',
       'oneToMany',
-      'api::discipline.discipline'
+      'api::work-sample-discipline.work-sample-discipline'
     >;
     embed: Attribute.Boolean & Attribute.DefaultTo<false>;
     embedLink: Attribute.String;

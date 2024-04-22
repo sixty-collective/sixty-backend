@@ -19,9 +19,6 @@
     "name": {
       "type": "string"
     },
-    "nameForWorkSamples": {
-      "type": "string"
-    },
     "profiles": {
       "type": "relation",
       "relation": "manyToMany",

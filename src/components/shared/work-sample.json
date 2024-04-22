@@ -26,10 +26,10 @@
     "description": {
       "type": "text"
     },
-    "disciplines": {
+    "work_sample_disciplines": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::discipline.discipline"
+      "target": "api::work-sample-discipline.work-sample-discipline"
     },
     "embed": {
       "type": "boolean",
