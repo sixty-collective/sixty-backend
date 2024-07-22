@@ -53,7 +53,7 @@
     },
     "testComponents": {
       "type": "component",
-      "repeatable": true,
+      "repeatable": false,
       "component": "shared.test-component"
     },
     "profilePicture": {
