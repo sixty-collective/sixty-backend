@@ -1220,6 +1220,7 @@ export interface ApiProfileProfile extends Schema.CollectionType {
       'api::descriptor.descriptor'
     >;
     slug: Attribute.UID<'api::profile.profile', 'name'>;
+    secondaryWebsite: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
