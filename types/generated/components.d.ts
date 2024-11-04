@@ -1,141 +1,15 @@
-import type { Schema, Attribute } from '@strapi/strapi';
+import type { Attribute, Schema } from '@strapi/strapi';
 
-export interface SharedWorkSample extends Schema.Component {
-  collectionName: 'components_shared_work_samples';
+export interface PageEmbed extends Schema.Component {
+  collectionName: 'components_page_embeds';
   info: {
-    displayName: 'Work Sample';
     description: '';
+    displayName: 'Embed';
   };
   attributes: {
-    name: Attribute.String;
-    images: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
-    link: Attribute.String;
-    description: Attribute.Text;
-    work_sample_disciplines: Attribute.Relation<
-      'shared.work-sample',
-      'oneToMany',
-      'api::work-sample-discipline.work-sample-discipline'
+    embed: Attribute.Enumeration<
+      ['donorbox', 'testimonialList', 'testimonialSubmission', 'contact']
     >;
-    embed: Attribute.Boolean & Attribute.DefaultTo<false>;
-    embedLink: Attribute.String;
-    profile: Attribute.Relation<
-      'shared.work-sample',
-      'oneToOne',
-      'api::profile.profile'
-    >;
-  };
-}
-
-export interface SharedTestComponent extends Schema.Component {
-  collectionName: 'components_shared_test_components';
-  info: {
-    displayName: 'Test Component';
-  };
-  attributes: {
-    Test: Attribute.String;
-  };
-}
-
-export interface SharedSlider extends Schema.Component {
-  collectionName: 'components_shared_sliders';
-  info: {
-    displayName: 'Slider';
-    icon: 'address-book';
-    description: '';
-  };
-  attributes: {
-    files: Attribute.Media<'images', true>;
-  };
-}
-
-export interface SharedSeo extends Schema.Component {
-  collectionName: 'components_shared_seos';
-  info: {
-    name: 'Seo';
-    icon: 'allergies';
-    displayName: 'Seo';
-    description: '';
-  };
-  attributes: {
-    metaTitle: Attribute.String & Attribute.Required;
-    metaDescription: Attribute.Text & Attribute.Required;
-    shareImage: Attribute.Media<'images'>;
-  };
-}
-
-export interface SharedRichText extends Schema.Component {
-  collectionName: 'components_shared_rich_texts';
-  info: {
-    displayName: 'Rich text';
-    icon: 'align-justify';
-    description: '';
-  };
-  attributes: {
-    body: Attribute.RichText;
-  };
-}
-
-export interface SharedQuote extends Schema.Component {
-  collectionName: 'components_shared_quotes';
-  info: {
-    displayName: 'Quote';
-    icon: 'indent';
-  };
-  attributes: {
-    title: Attribute.String;
-    body: Attribute.Text;
-  };
-}
-
-export interface SharedMedia extends Schema.Component {
-  collectionName: 'components_shared_media';
-  info: {
-    displayName: 'Media';
-    icon: 'file-video';
-    description: '';
-  };
-  attributes: {
-    file: Attribute.Media<'images' | 'files' | 'videos'>;
-  };
-}
-
-export interface SharedImages extends Schema.Component {
-  collectionName: 'components_shared_images';
-  info: {
-    displayName: 'images';
-  };
-  attributes: {};
-}
-
-export interface PageText extends Schema.Component {
-  collectionName: 'components_page_texts';
-  info: {
-    displayName: 'Text';
-    description: '';
-  };
-  attributes: {
-    text: Attribute.RichText;
-  };
-}
-
-export interface PageQa extends Schema.Component {
-  collectionName: 'components_page_qas';
-  info: {
-    displayName: 'qa';
-  };
-  attributes: {
-    question: Attribute.String;
-    answer: Attribute.Text;
-  };
-}
-
-export interface PageImage extends Schema.Component {
-  collectionName: 'components_page_images';
-  info: {
-    displayName: 'Image';
-  };
-  attributes: {
-    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
   };
 }
 
@@ -149,15 +23,141 @@ export interface PageFaq extends Schema.Component {
   };
 }
 
-export interface PageEmbed extends Schema.Component {
-  collectionName: 'components_page_embeds';
+export interface PageImage extends Schema.Component {
+  collectionName: 'components_page_images';
   info: {
-    displayName: 'Embed';
-    description: '';
+    displayName: 'Image';
   };
   attributes: {
-    embed: Attribute.Enumeration<
-      ['donorbox', 'testimonialList', 'testimonialSubmission', 'contact']
+    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
+export interface PageQa extends Schema.Component {
+  collectionName: 'components_page_qas';
+  info: {
+    displayName: 'qa';
+  };
+  attributes: {
+    answer: Attribute.Text;
+    question: Attribute.String;
+  };
+}
+
+export interface PageText extends Schema.Component {
+  collectionName: 'components_page_texts';
+  info: {
+    description: '';
+    displayName: 'Text';
+  };
+  attributes: {
+    text: Attribute.RichText;
+  };
+}
+
+export interface SharedImages extends Schema.Component {
+  collectionName: 'components_shared_images';
+  info: {
+    displayName: 'images';
+  };
+  attributes: {};
+}
+
+export interface SharedMedia extends Schema.Component {
+  collectionName: 'components_shared_media';
+  info: {
+    description: '';
+    displayName: 'Media';
+    icon: 'file-video';
+  };
+  attributes: {
+    file: Attribute.Media<'images' | 'files' | 'videos'>;
+  };
+}
+
+export interface SharedQuote extends Schema.Component {
+  collectionName: 'components_shared_quotes';
+  info: {
+    displayName: 'Quote';
+    icon: 'indent';
+  };
+  attributes: {
+    body: Attribute.Text;
+    title: Attribute.String;
+  };
+}
+
+export interface SharedRichText extends Schema.Component {
+  collectionName: 'components_shared_rich_texts';
+  info: {
+    description: '';
+    displayName: 'Rich text';
+    icon: 'align-justify';
+  };
+  attributes: {
+    body: Attribute.RichText;
+  };
+}
+
+export interface SharedSeo extends Schema.Component {
+  collectionName: 'components_shared_seos';
+  info: {
+    description: '';
+    displayName: 'Seo';
+    icon: 'allergies';
+    name: 'Seo';
+  };
+  attributes: {
+    metaDescription: Attribute.Text & Attribute.Required;
+    metaTitle: Attribute.String & Attribute.Required;
+    shareImage: Attribute.Media<'images'>;
+  };
+}
+
+export interface SharedSlider extends Schema.Component {
+  collectionName: 'components_shared_sliders';
+  info: {
+    description: '';
+    displayName: 'Slider';
+    icon: 'address-book';
+  };
+  attributes: {
+    files: Attribute.Media<'images', true>;
+  };
+}
+
+export interface SharedTestComponent extends Schema.Component {
+  collectionName: 'components_shared_test_components';
+  info: {
+    displayName: 'Test Component';
+  };
+  attributes: {
+    Test: Attribute.String;
+  };
+}
+
+export interface SharedWorkSample extends Schema.Component {
+  collectionName: 'components_shared_work_samples';
+  info: {
+    description: '';
+    displayName: 'Work Sample';
+  };
+  attributes: {
+    description: Attribute.Text;
+    embed: Attribute.Boolean & Attribute.DefaultTo<false>;
+    embedLink: Attribute.String;
+    images: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
+    link: Attribute.String;
+    name: Attribute.String;
+    profile: Attribute.Relation<
+      'shared.work-sample',
+      'oneToOne',
+      'api::profile.profile'
+    >;
+    work_sample_disciplines: Attribute.Relation<
+      'shared.work-sample',
+      'oneToMany',
+      'api::work-sample-discipline.work-sample-discipline'
     >;
   };
 }
@@ -165,19 +165,19 @@ export interface PageEmbed extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
-      'shared.work-sample': SharedWorkSample;
-      'shared.test-component': SharedTestComponent;
-      'shared.slider': SharedSlider;
-      'shared.seo': SharedSeo;
-      'shared.rich-text': SharedRichText;
-      'shared.quote': SharedQuote;
-      'shared.media': SharedMedia;
-      'shared.images': SharedImages;
-      'page.text': PageText;
-      'page.qa': PageQa;
-      'page.image': PageImage;
-      'page.faq': PageFaq;
       'page.embed': PageEmbed;
+      'page.faq': PageFaq;
+      'page.image': PageImage;
+      'page.qa': PageQa;
+      'page.text': PageText;
+      'shared.images': SharedImages;
+      'shared.media': SharedMedia;
+      'shared.quote': SharedQuote;
+      'shared.rich-text': SharedRichText;
+      'shared.seo': SharedSeo;
+      'shared.slider': SharedSlider;
+      'shared.test-component': SharedTestComponent;
+      'shared.work-sample': SharedWorkSample;
     }
   }
 }
