@@ -1,61 +1,61 @@
-import type { Attribute, Schema } from '@strapi/strapi';
+import type { Schema, Struct } from '@strapi/strapi';
 
-export interface PageEmbed extends Schema.Component {
+export interface PageEmbed extends Struct.ComponentSchema {
   collectionName: 'components_page_embeds';
   info: {
     description: '';
     displayName: 'Embed';
   };
   attributes: {
-    embed: Attribute.Enumeration<
+    embed: Schema.Attribute.Enumeration<
       ['donorbox', 'testimonialList', 'testimonialSubmission', 'contact']
     >;
   };
 }
 
-export interface PageFaq extends Schema.Component {
+export interface PageFaq extends Struct.ComponentSchema {
   collectionName: 'components_page_faqs';
   info: {
     displayName: 'faq';
   };
   attributes: {
-    qa: Attribute.Component<'page.qa', true>;
+    qa: Schema.Attribute.Component<'page.qa', true>;
   };
 }
 
-export interface PageImage extends Schema.Component {
+export interface PageImage extends Struct.ComponentSchema {
   collectionName: 'components_page_images';
   info: {
     displayName: 'Image';
   };
   attributes: {
-    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
   };
 }
 
-export interface PageQa extends Schema.Component {
+export interface PageQa extends Struct.ComponentSchema {
   collectionName: 'components_page_qas';
   info: {
     displayName: 'qa';
   };
   attributes: {
-    answer: Attribute.Text;
-    question: Attribute.String;
+    answer: Schema.Attribute.Text;
+    question: Schema.Attribute.String;
   };
 }
 
-export interface PageText extends Schema.Component {
+export interface PageText extends Struct.ComponentSchema {
   collectionName: 'components_page_texts';
   info: {
     description: '';
     displayName: 'Text';
   };
   attributes: {
-    text: Attribute.RichText;
+    text: Schema.Attribute.RichText;
   };
 }
 
-export interface SharedImages extends Schema.Component {
+export interface SharedImages extends Struct.ComponentSchema {
   collectionName: 'components_shared_images';
   info: {
     displayName: 'images';
@@ -63,7 +63,7 @@ export interface SharedImages extends Schema.Component {
   attributes: {};
 }
 
-export interface SharedMedia extends Schema.Component {
+export interface SharedMedia extends Struct.ComponentSchema {
   collectionName: 'components_shared_media';
   info: {
     description: '';
@@ -71,23 +71,23 @@ export interface SharedMedia extends Schema.Component {
     icon: 'file-video';
   };
   attributes: {
-    file: Attribute.Media<'images' | 'files' | 'videos'>;
+    file: Schema.Attribute.Media<'images' | 'files' | 'videos'>;
   };
 }
 
-export interface SharedQuote extends Schema.Component {
+export interface SharedQuote extends Struct.ComponentSchema {
   collectionName: 'components_shared_quotes';
   info: {
     displayName: 'Quote';
     icon: 'indent';
   };
   attributes: {
-    body: Attribute.Text;
-    title: Attribute.String;
+    body: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
   };
 }
 
-export interface SharedRichText extends Schema.Component {
+export interface SharedRichText extends Struct.ComponentSchema {
   collectionName: 'components_shared_rich_texts';
   info: {
     description: '';
@@ -95,11 +95,11 @@ export interface SharedRichText extends Schema.Component {
     icon: 'align-justify';
   };
   attributes: {
-    body: Attribute.RichText;
+    body: Schema.Attribute.RichText;
   };
 }
 
-export interface SharedSeo extends Schema.Component {
+export interface SharedSeo extends Struct.ComponentSchema {
   collectionName: 'components_shared_seos';
   info: {
     description: '';
@@ -108,13 +108,13 @@ export interface SharedSeo extends Schema.Component {
     name: 'Seo';
   };
   attributes: {
-    metaDescription: Attribute.Text & Attribute.Required;
-    metaTitle: Attribute.String & Attribute.Required;
-    shareImage: Attribute.Media<'images'>;
+    metaDescription: Schema.Attribute.Text & Schema.Attribute.Required;
+    metaTitle: Schema.Attribute.String & Schema.Attribute.Required;
+    shareImage: Schema.Attribute.Media<'images'>;
   };
 }
 
-export interface SharedSlider extends Schema.Component {
+export interface SharedSlider extends Struct.ComponentSchema {
   collectionName: 'components_shared_sliders';
   info: {
     description: '';
@@ -122,49 +122,47 @@ export interface SharedSlider extends Schema.Component {
     icon: 'address-book';
   };
   attributes: {
-    files: Attribute.Media<'images', true>;
+    files: Schema.Attribute.Media<'images', true>;
   };
 }
 
-export interface SharedTestComponent extends Schema.Component {
+export interface SharedTestComponent extends Struct.ComponentSchema {
   collectionName: 'components_shared_test_components';
   info: {
     displayName: 'Test Component';
   };
   attributes: {
-    Test: Attribute.String;
+    Test: Schema.Attribute.String;
   };
 }
 
-export interface SharedWorkSample extends Schema.Component {
+export interface SharedWorkSample extends Struct.ComponentSchema {
   collectionName: 'components_shared_work_samples';
   info: {
     description: '';
     displayName: 'Work Sample';
   };
   attributes: {
-    description: Attribute.Text;
-    embed: Attribute.Boolean & Attribute.DefaultTo<false>;
-    embedLink: Attribute.String;
-    images: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
-    link: Attribute.String;
-    name: Attribute.String;
-    profile: Attribute.Relation<
-      'shared.work-sample',
-      'oneToOne',
-      'api::profile.profile'
+    description: Schema.Attribute.Text;
+    embed: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    embedLink: Schema.Attribute.String;
+    images: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
     >;
-    work_sample_disciplines: Attribute.Relation<
-      'shared.work-sample',
+    link: Schema.Attribute.String;
+    name: Schema.Attribute.String;
+    profile: Schema.Attribute.Relation<'oneToOne', 'api::profile.profile'>;
+    work_sample_disciplines: Schema.Attribute.Relation<
       'oneToMany',
       'api::work-sample-discipline.work-sample-discipline'
     >;
   };
 }
 
-declare module '@strapi/types' {
-  export module Shared {
-    export interface Components {
+declare module '@strapi/strapi' {
+  export module Public {
+    export interface ComponentSchemas {
       'page.embed': PageEmbed;
       'page.faq': PageFaq;
       'page.image': PageImage;

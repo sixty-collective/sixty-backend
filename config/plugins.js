@@ -1,20 +1,7 @@
 module.exports = ({ env }) => ({
-  "import-export-entries": {
-    enabled: true,
-    config: {},
-  },
   "users-permissions": {
     config: {
       jwtSecret: env("JWT_SECRET"),
-    },
-  },
-  transformer: {
-    enabled: false,
-    config: {
-      responseTransforms: {
-        removeAttributesKey: true,
-        removeDataKey: true,
-      },
     },
   },
   graphql: {
