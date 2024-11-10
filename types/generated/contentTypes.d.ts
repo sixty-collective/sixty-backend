@@ -646,11 +646,6 @@ export interface ApiDisciplineDiscipline extends Schema.CollectionType {
   options: {
     draftAndPublish: true;
   };
-  pluginOptions: {
-    'import-export-entries': {
-      idField: 'name';
-    };
-  };
   attributes: {
     createdAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
@@ -760,11 +755,6 @@ export interface ApiProfileProfile extends Schema.CollectionType {
   };
   options: {
     draftAndPublish: true;
-  };
-  pluginOptions: {
-    'import-export-entries': {
-      idField: 'name';
-    };
   };
   attributes: {
     availableForWork: Attribute.Boolean;
