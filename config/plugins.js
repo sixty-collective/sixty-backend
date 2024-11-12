@@ -4,6 +4,11 @@ module.exports = ({ env }) => ({
       jwtSecret: env("JWT_SECRET"),
     },
   },
+  'strapi-v5-plugin-populate-deep': {
+    config: {
+      defaultDepth: 5, // Default is 5
+    }
+  },
   graphql: {
     config: {
       endpoint: "/graphql",
