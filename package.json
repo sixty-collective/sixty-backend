@@ -8,6 +8,7 @@
     "ajv-keywords": "^5.1.0",
     "better-sqlite3": "^11.3.0",
     "fs-extra": "^10.0.0",
+    "lodash": "^4.17.21",
     "lodash.set": "^4.3.2",
     "mime-types": "^2.1.27",
     "monaco-editor-webpack-plugin": "^7.1.0",
@@ -16,7 +17,6 @@
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-router-dom": "^6.0.0",
-    "strapi-import-export": "^0.0.1",
     "strapi-v5-plugin-populate-deep": "^4.0.4",
     "styled-components": "^6.0.0",
     "typescript": "^5.2.2"

@@ -10,8 +10,7 @@
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {
-  },
+  "pluginOptions": {},
   "attributes": {
     "name": {
       "type": "string"
@@ -48,11 +47,6 @@
       "repeatable": true,
       "component": "shared.work-sample"
     },
-    "testComponents": {
-      "type": "component",
-      "repeatable": false,
-      "component": "shared.test-component"
-    },
     "profilePicture": {
       "type": "media",
       "multiple": false,
@@ -66,17 +60,6 @@
     },
     "location": {
       "type": "string"
-    },
-    "testmedia": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
     },
     "disciplines": {
       "type": "relation",
