@@ -152,7 +152,6 @@ export interface SharedWorkSample extends Struct.ComponentSchema {
     >;
     link: Schema.Attribute.String;
     name: Schema.Attribute.String;
-    profile: Schema.Attribute.Relation<'oneToOne', 'api::profile.profile'>;
     work_sample_disciplines: Schema.Attribute.Relation<
       'oneToMany',
       'api::work-sample-discipline.work-sample-discipline'
