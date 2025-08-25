@@ -9,6 +9,13 @@ module.exports = ({ env }) => ({
       defaultDepth: 5, // Default is 5
     }
   },
+  "strapi-import-export": {
+    enabled: true,
+    config: {
+      authorizedExports: ["api::profile.profile"],
+      authorizedImports: ["api::profile.profile", "api::descriptor.descriptor", "api::discipline.discipline"]
+  },
+},
   graphql: {
     config: {
       endpoint: "/graphql",

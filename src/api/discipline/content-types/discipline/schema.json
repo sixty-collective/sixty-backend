@@ -8,9 +8,13 @@
     "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
-  "pluginOptions": {},
+  "pluginOptions": {
+    "strapi-import-export": {
+      "idField": "slug"
+    }
+  },
   "attributes": {
     "name": {
       "type": "string"

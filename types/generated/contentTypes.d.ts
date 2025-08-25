@@ -34,6 +34,10 @@ export interface AdminApiToken extends Struct.CollectionTypeSchema {
         minLength: 1;
       }> &
       Schema.Attribute.DefaultTo<''>;
+    encryptedKey: Schema.Attribute.Text &
+      Schema.Attribute.SetMinMaxLength<{
+        minLength: 1;
+      }>;
     expiresAt: Schema.Attribute.DateTime;
     lastUsedAt: Schema.Attribute.DateTime;
     lifespan: Schema.Attribute.BigInteger;
@@ -472,7 +476,12 @@ export interface ApiDescriptorDescriptor extends Struct.CollectionTypeSchema {
     singularName: 'descriptor';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
+  };
+  pluginOptions: {
+    'strapi-import-export': {
+      idField: 'name';
+    };
   };
   attributes: {
     createdAt: Schema.Attribute.DateTime;
@@ -541,7 +550,12 @@ export interface ApiDisciplineDiscipline extends Struct.CollectionTypeSchema {
     singularName: 'discipline';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
+  };
+  pluginOptions: {
+    'strapi-import-export': {
+      idField: 'slug';
+    };
   };
   attributes: {
     createdAt: Schema.Attribute.DateTime;
@@ -650,7 +664,7 @@ export interface ApiProfileProfile extends Struct.CollectionTypeSchema {
     singularName: 'profile';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     availableForWork: Schema.Attribute.Boolean;
