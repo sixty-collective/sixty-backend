@@ -478,11 +478,6 @@ export interface ApiDescriptorDescriptor extends Struct.CollectionTypeSchema {
   options: {
     draftAndPublish: false;
   };
-  pluginOptions: {
-    'strapi-import-export': {
-      idField: 'name';
-    };
-  };
   attributes: {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -551,11 +546,6 @@ export interface ApiDisciplineDiscipline extends Struct.CollectionTypeSchema {
   };
   options: {
     draftAndPublish: false;
-  };
-  pluginOptions: {
-    'strapi-import-export': {
-      idField: 'slug';
-    };
   };
   attributes: {
     createdAt: Schema.Attribute.DateTime;

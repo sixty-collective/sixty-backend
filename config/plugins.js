@@ -14,8 +14,8 @@ module.exports = ({ env }) => ({
     config: {
       authorizedExports: ["api::profile.profile"],
       authorizedImports: ["api::profile.profile", "api::descriptor.descriptor", "api::discipline.discipline"]
+    },
   },
-},
   graphql: {
     config: {
       endpoint: "/graphql",

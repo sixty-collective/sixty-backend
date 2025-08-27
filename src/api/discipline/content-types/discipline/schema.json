@@ -11,9 +11,6 @@
     "draftAndPublish": false
   },
   "pluginOptions": {
-    "strapi-import-export": {
-      "idField": "slug"
-    }
   },
   "attributes": {
     "name": {
