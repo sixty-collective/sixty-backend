@@ -7,7 +7,7 @@
     "displayName": "Work Sample Discipline"
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
