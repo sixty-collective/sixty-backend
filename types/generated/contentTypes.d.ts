@@ -807,7 +807,7 @@ export interface ApiWorkSampleDisciplineWorkSampleDiscipline
     singularName: 'work-sample-discipline';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     createdAt: Schema.Attribute.DateTime;
