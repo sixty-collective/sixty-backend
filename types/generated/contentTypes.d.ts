@@ -711,11 +711,12 @@ export interface ApiProfileProfile extends Struct.CollectionTypeSchema {
     singularName: 'profile';
   };
   options: {
-    draftAndPublish: false;
+    draftAndPublish: true;
   };
   attributes: {
     availableForWork: Schema.Attribute.Boolean;
     bio: Schema.Attribute.Text;
+    blueskyHandle: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -727,6 +728,7 @@ export interface ApiProfileProfile extends Struct.CollectionTypeSchema {
       'manyToMany',
       'api::discipline.discipline'
     >;
+    displayName: Schema.Attribute.String;
     email: Schema.Attribute.Email;
     gigsSeeking: Schema.Attribute.Text;
     instagramHandle: Schema.Attribute.String;
@@ -742,6 +744,7 @@ export interface ApiProfileProfile extends Struct.CollectionTypeSchema {
     profilePicture: Schema.Attribute.Media<'images'>;
     pronouns: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
+    secondaryLocation: Schema.Attribute.String;
     secondaryWebsite: Schema.Attribute.String;
     slug: Schema.Attribute.UID<'name'>;
     twitterHandle: Schema.Attribute.String;

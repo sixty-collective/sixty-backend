@@ -8,7 +8,7 @@
     "description": ""
   },
   "options": {
-    "draftAndPublish": false
+    "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
@@ -44,8 +44,8 @@
     },
     "workSamples": {
       "type": "component",
-      "repeatable": true,
-      "component": "shared.work-sample"
+      "component": "shared.work-sample",
+      "repeatable": true
     },
     "profilePicture": {
       "type": "media",
@@ -78,6 +78,15 @@
       "targetField": "name"
     },
     "secondaryWebsite": {
+      "type": "string"
+    },
+    "blueskyHandle": {
+      "type": "string"
+    },
+    "secondaryLocation": {
+      "type": "string"
+    },
+    "displayName": {
       "type": "string"
     }
   }
